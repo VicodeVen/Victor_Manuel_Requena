@@ -3,6 +3,7 @@ import Formulario from "./formulario.js";
 import slider from "./slider.js";
 import box_light from "./box_light.js";
 import scroll  from "./scroll_animate.js";
+import canvasAnimate from "./canvas.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     menuHamburguesa();
@@ -10,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     slider();
     Formulario();
     scroll();
-    
+    canvasAnimate();
 });
 
 
