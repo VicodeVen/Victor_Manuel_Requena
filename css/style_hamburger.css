@@ -56,17 +56,18 @@ width: 5px;
     padding:50px 0;
     z-index: 6;
     list-style: none;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.247);
+    border-radius: 5px;
+}
+
+.tag__box:last-child {
+    border: none;
 }
 
 .tag__box:hover {
-    background-color: #f3f3f3c4;
+    background-color: #6af0f571;
     transition: all 0.4s ease;
     z-index:7;
-    border-radius:10px;
-}
-
-.tag__box:hover a {
-    color: black;
 }
 
 .hamburger{
