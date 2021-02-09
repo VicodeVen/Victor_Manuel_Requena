@@ -18,6 +18,5 @@ export default function scroll() {
             contentDos.classList.remove("fadeIn");
             contentDos.classList.remove("dsplact");
         }
-        
     });
 };

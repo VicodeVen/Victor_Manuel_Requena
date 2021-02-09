@@ -6,11 +6,11 @@ import scroll  from "./scroll_animate.js";
 import canvasAnimate from "./canvas.js";
 
 document.addEventListener("DOMContentLoaded", () => {
+    scroll();
     menuHamburguesa();
     box_light();
     slider();
     Formulario();
-    scroll();
     canvasAnimate();
 });
 
