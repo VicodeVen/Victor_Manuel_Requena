@@ -1,7 +1,7 @@
 export default function canvasAnimate () {
     const d= document;
     const w = window;
-    const gravedad = 0.35;
+    const gravedad = 0.95;
     let canvas = d.querySelector("#board"),
     ctx = canvas.getContext("2d"),
     playing = true, //Cambiar a True para ver los resultados
@@ -22,7 +22,7 @@ export default function canvasAnimate () {
         ctx.fillStyle = "#257ec3af";
         if(window.pageYOffset > 1650) {
             ctx.fillRect(0,y,1,size);
-            tiempo = tiempo + 0.0100;
+            tiempo = tiempo + 0.00300;
             velocidad = velocidad + gravedad * tiempo;
             y = y + velocidad;
         }else {
@@ -31,16 +31,43 @@ export default function canvasAnimate () {
             tiempo = 0;
             y = 50;
         }
+
+        // barrasDeProgreso.classList.add("fadeInLeft");
+        // barrasDeProgreso.classList.add("transport")
         //tags
         if(w.pageYOffset > 1700){service1.classList.add("ser_opacity")}else {service1.classList.remove("ser_opacity")};
-        if(y > 104) {service3.classList.add("ser_opacity")}else {service3.classList.remove("ser_opacity")};
+        if(y > 104) {service3.classList.add("ser_opacity");}else {service3.classList.remove("ser_opacity")};
         if(y > 230) {service2.classList.add("ser_opacity")}else {service2.classList.remove("ser_opacity")};
         if(y > 424) {service4.classList.add("ser_opacity")}else {service4.classList.remove("ser_opacity")};
         //squares
-        if(w.pageYOffset > 1700){ser1.classList.add("ser_opacity")}else {ser1.classList.remove("ser_opacity")};
-        if(y > 104) {ser3.classList.add("ser_opacity")}else {ser3.classList.remove("ser_opacity")};
-        if(y > 230) {ser2.classList.add("ser_opacity")}else {ser2.classList.remove("ser_opacity")};
-        if(y > 424) {ser4.classList.add("ser_opacity")}else {ser4.classList.remove("ser_opacity")};
+        if(w.pageYOffset > 1700){
+            ser1.classList.add("ser_opacity")
+            ser1.classList.add("fadeInLeft");
+        }else {
+            ser1.classList.remove("fadeInLeft");
+            ser1.classList.remove("ser_opacity")
+        };
+        if(y > 104) {
+            ser3.classList.add("ser_opacity")
+            ser3.classList.add("fadeInRight")
+        }else {
+            ser3.classList.remove("fadeInRight")
+            ser3.classList.remove("ser_opacity")
+        };
+        if(y > 230) {
+            ser2.classList.add("ser_opacity")
+            ser2.classList.add("fadeInLeft")
+        }else {
+            ser2.classList.remove("ser_opacity")
+            ser2.classList.remove("fadeInLeft")
+        };
+        if(y > 424) {
+            ser4.classList.add("ser_opacity")
+            ser4.classList.add("fadeInRight")
+        }else {
+            ser4.classList.remove("fadeInRight")
+            ser4.classList.remove("ser_opacity")
+        };
         if(playing) requestAnimationFrame(draw)
 }
 requestAnimationFrame(draw);
