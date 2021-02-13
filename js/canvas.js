@@ -9,14 +9,14 @@ export default function canvasAnimate () {
     tiempo = 0,
     y = 50,
     velocidad = 0,
-    service1 = d.querySelector(".service1"),
-    service2 = d.querySelector(".service2"),
-    service3 = d.querySelector(".service3"),
-    service4 = d.querySelector(".service4"),
-    ser1 = document.querySelector(".ser1"),
-    ser2 = document.querySelector(".ser2"),
-    ser3 = document.querySelector(".ser3"),
-    ser4 = document.querySelector(".ser4");
+    $service1 = d.querySelector(".service1"),
+    $service2 = d.querySelector(".service2"),
+    $service3 = d.querySelector(".service3"),
+    $service4 = d.querySelector(".service4"),
+    $ser1 = document.querySelector(".ser1"),
+    $ser2 = document.querySelector(".ser2"),
+    $ser3 = document.querySelector(".ser3"),
+    $ser4 = document.querySelector(".ser4");
     
     function draw () {
         ctx.fillStyle = "#257ec3af";
@@ -32,41 +32,38 @@ export default function canvasAnimate () {
             y = 50;
         }
 
-        // barrasDeProgreso.classList.add("fadeInLeft");
-        // barrasDeProgreso.classList.add("transport")
-        //tags
-        if(w.pageYOffset > 1700){service1.classList.add("ser_opacity")}else {service1.classList.remove("ser_opacity")};
-        if(y > 104) {service3.classList.add("ser_opacity");}else {service3.classList.remove("ser_opacity")};
-        if(y > 230) {service2.classList.add("ser_opacity")}else {service2.classList.remove("ser_opacity")};
-        if(y > 424) {service4.classList.add("ser_opacity")}else {service4.classList.remove("ser_opacity")};
+        if(w.pageYOffset > 1700){$service1.classList.add("ser_opacity")} else {$service1.classList.remove("ser_opacity")};
+        if(y > 104) {$service3.classList.add("ser_opacity");} else {$service3.classList.remove("ser_opacity")};
+        if(y > 230) {$service2.classList.add("ser_opacity")} else {$service2.classList.remove("ser_opacity")};
+        if(y > 424) {$service4.classList.add("ser_opacity")} else {$service4.classList.remove("ser_opacity")};
         //squares
         if(w.pageYOffset > 1700){
-            ser1.classList.add("ser_opacity")
-            ser1.classList.add("fadeInLeft");
+            $ser1.classList.add("ser_opacity")
+            $ser1.classList.add("fadeInLeft");
         }else {
-            ser1.classList.remove("fadeInLeft");
-            ser1.classList.remove("ser_opacity")
+            $ser1.classList.remove("fadeInLeft");
+            $ser1.classList.remove("ser_opacity")
         };
         if(y > 104) {
-            ser3.classList.add("ser_opacity")
-            ser3.classList.add("fadeInRight")
+            $ser3.classList.add("ser_opacity")
+            $ser3.classList.add("fadeInRight")
         }else {
-            ser3.classList.remove("fadeInRight")
-            ser3.classList.remove("ser_opacity")
+            $ser3.classList.remove("fadeInRight")
+            $ser3.classList.remove("ser_opacity")
         };
         if(y > 230) {
-            ser2.classList.add("ser_opacity")
-            ser2.classList.add("fadeInLeft")
+            $ser2.classList.add("ser_opacity")
+            $ser2.classList.add("fadeInLeft")
         }else {
-            ser2.classList.remove("ser_opacity")
-            ser2.classList.remove("fadeInLeft")
+            $ser2.classList.remove("ser_opacity")
+            $ser2.classList.remove("fadeInLeft")
         };
         if(y > 424) {
-            ser4.classList.add("ser_opacity")
-            ser4.classList.add("fadeInRight")
+            $ser4.classList.add("ser_opacity")
+            $ser4.classList.add("fadeInRight")
         }else {
-            ser4.classList.remove("fadeInRight")
-            ser4.classList.remove("ser_opacity")
+            $ser4.classList.remove("fadeInRight")
+            $ser4.classList.remove("ser_opacity")
         };
         if(playing) requestAnimationFrame(draw)
 }
