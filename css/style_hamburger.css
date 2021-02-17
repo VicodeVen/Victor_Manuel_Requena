@@ -72,7 +72,7 @@ width: 5px;
 
 .hamburger{
     outline: none;
-    display: flex;
+    display: none;
     position: fixed;
     bottom: 1vh;
     right: 1vh;
@@ -90,6 +90,10 @@ width: 5px;
 }
 
 @media screen and (max-width: 800px) {
+
+    .hamburger {
+        display: flex;
+    }
 
     .box-dark.active, .a {
         width: 40%;
