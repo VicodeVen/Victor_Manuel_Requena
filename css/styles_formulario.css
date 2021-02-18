@@ -33,7 +33,7 @@
     line-height: 45px;
     padding: 0 40px 0 10px;
     transition: .3s ease all;
-    border: 1px solid rgb(5, 243, 243);
+    border: 1px solid rgb(5, 243, 191);
     color: white;
 }
 
@@ -160,7 +160,7 @@
 }
 
 .mensaje__input{
-    border: 1px solid rgb(5, 243, 243);
+    border: 1px solid rgb(5, 243, 184);
     position: absolute;
     top: 0;
     width: 100%;

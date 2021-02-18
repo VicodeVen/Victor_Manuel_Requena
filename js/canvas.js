@@ -19,7 +19,7 @@ export default function canvasAnimate () {
     $ser4 = document.querySelector(".ser4");
     
     function draw () {
-        ctx.fillStyle = "#257ec3af";
+        ctx.fillStyle = "#00ff95af";
         if(window.pageYOffset > 1650) {
             ctx.fillRect(0,y,1,size);
             tiempo = tiempo + 0.00300;
